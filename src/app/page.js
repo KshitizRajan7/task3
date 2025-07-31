@@ -1,103 +1,97 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="h-screen w-screen inline-flex justify-center items-center">
+      <div className="w-[1440px] h-[854px] bg-white relative">
+        <p className="w-[6223px] h-[45px] top-[65px] left-[409px] absolute font-fustat font-medium text-[32px] leading-[100%] tracking-normal text-[#333333]">Note: Click the cards to view the animation</p>
+        <div className="inline-flex flex-col w-[1440px] top-[68.5px] absolute pt-[60px] pr-[112px] pb-[60px] pl-[112px] gap-[20px] ">
+          {/* content */}
+          <div className="flex flex-col w-[1216px] gap-[20px] ">
+            {/* text */}
+            <div className="inline-flex flex-col w-fit gap-[20px] ">
+              <p className="w-[484px] h-[30px] font-outfit font-normal text-2xl leading-[100%] tracking-normal text-[#414141]">Explore our classes and master trending skills!</p>
+              <p className="w-[550px] h-[38px] font-nohemi font-bold text-[32px] leading-[120%] tracking-normal">Dive Into <span className="font-nohemi font-bold text-[32px] leading-[120%] tracking-normal text-[#1DA077]">What’s Hot Right Now! 🔥</span></p>
+            </div>
+            {/* stats */}
+            <div className="inline-flex w-[1216px] h-[461px] gap-[32px]  ">
+              {/* active */}
+              <div className="w-[592px] h-[461px] rounded-4xl bg-[#C33241] relative">
+                {/* button */}
+                <div className="inline-flex top-[40px] left-[393px] absolute gap-[8px]">
+                  <p className="w-[138px] h-[23px] font-outfit font-semibold text-lg leading-[100%] tracking-normal text-center text-[#F9EBEC]">View all Courses</p>
+                  {/* icon */}
+                  <div className="w-[20px] h-[20px] relative">
+                    {/* arrow */}
+                    <img src="icons/arrow.svg" className="w-[14px] h-[11.67px] top-[4.17px] left-[3px] absolute" alt="arrow" />
+                  </div>
+                </div>
+                <p className="w-[34px] h-[77px] top-[275px] left-[262px] absolute font-nohemi font-bold text-[64px] leading-[120%] tracking-normal text-center text-[#FFFFFF]">+</p>
+                {/* frame 811897 */}
+                <div className="inline-flex top-[126px] left-[90px] absolute gap-[42px]">
+                  {/* react frame */}
+                  <div className="w-[75px] h-[75px] rotate-[16.67deg] ">
+                    {/* react icon */}
+                    <img src="icons/react.svg" className="h-[75px] w-[75px] top-0 rotate-[16.67deg]" alt='react' />
+                  </div>
+                  {/* messages frame */}
+                  <div className="w-[75px] h-[75px] rotate-[7.22deg] ">
+                    {/* messages icon */}
+                    <img src="icons/message.svg" className="h-[75px] w-[70.24px] top-[0.3px] left-[2.36px] rotate-[7.22deg]" alt='message' />
+                  </div>
+                  {/* vue icon */}
+                  <div className="w-[55.75px] h-[75px] rotate-[-8.97deg]  object-cover">
+                    <img src="icons/vue.svg" className="w-full h-full object-cover scale-[1.6] top-2 absolute " alt='vue' />
+                  </div>
+                  {/* pen icon */}
+                  <img src="icons/pen.svg" className="w-[75px] h-[75px] rotate-[-12.61deg] " alt='pen' />
+                </div>
+                {/* frame 811895 */}
+                <div className="inline-flex top-[283px] left-[75px] gap-[24px] absolute ">
+                  <p className="w-[200px] h-[138px] font-nohemi font-bold text-[130px] leading-[120%] tracking-normal text-center text-[#F9EBEC]">23</p>
+                  {/* frame 811894 */}
+                  <div className="inline-flex flex-col w-[218px] gap-[12px]  justify-center">
+                    <p className="w-[164px] h-[40px] font-outfit font-bold text-[30px] leading-[100%] tracking-normal text-center text-[#F9EBEC]">All Courses</p>
+                    <p className="w-[218px] h-[46px] font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#F9EBEC]">courses you're powering through right now.</p>
+                  </div>
+                </div>
+              </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+              {/* upcoming */}
+              <div className="w-[280px] h-[461px] rounded-4xl  relative">
+                <p className="w-[34px] h-[77px] top-[259px] left-[228px] absolute font-nohemi font-bold text-[64px] leading-[120%] tracking-normal text-center text-[#C33241]">+</p>
+                {/* frame 811895 */}
+                <div className="inline-flex flex-col top-[0px] left-[35.5px] absolute gap-[24px]  ">
+                  {/* frame 811894 */}
+                  <div className="inline-flex flex-col h-[218px] gap-[12px]  ">
+                    <div className="rotate-90">
+                      <p className="w-[218px] h-[80px] rotate-90 font-outfit font-bold text-[32px] leading-[100%] tracking-normal text-[#C33241]">Upcoming Courses</p>
+                      <p className="w-[218px] h-[46px] rotate-90 font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#C33241]">exciting new courses waiting to boost your skills.</p>
+                    </div>
+                  </div>
+                  {/* text */}
+                  <p className="w-[209px] h-[180px] font-bold text-[150px] leading-[120%] tracking-normal text-center text-[#C33241]">05</p>
+                </div>
+              </div>
+              {/* ongoing */}
+              <div className="w-[280px] h-[461px] rounded-4xl  relative">
+                <p className="w-[34px] h-[77px] top-[259px] left-[228px] absolute font-nohemi font-bold text-[64px] leading-[120%] tracking-normal text-center text-[#C33241]">+</p>
+                {/* frame 811895 */}
+                <div className="inline-flex flex-col top-[0px] left-[35.5px] absolute gap-[24px]  ">
+                  {/* frame 811894 */}
+                  <div className="inline-flex flex-col h-[218px] gap-[12px]  ">
+                    <div className="rotate-90">
+                      <p className="w-[218px] h-[80px] rotate-90 font-outfit font-bold text-[32px] leading-[100%] tracking-normal text-[#C33241]">Ongoing Courses</p>
+                      <p className="w-[218px] h-[46px] rotate-90 font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#C33241]">currently happening—don’t miss out on the action!</p>
+                    </div>
+                  </div>
+                  {/* text */}
+                  <p className="w-[209px] h-[180px] font-bold text-[150px] leading-[120%] tracking-normal text-center text-[#C33241]">10</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </div >
   );
 }

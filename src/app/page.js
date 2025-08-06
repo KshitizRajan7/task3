@@ -45,7 +45,7 @@ export default function Home() {
                   <img src="icons/pen.svg" className="w-[75px] h-[75px] rotate-[-12.61deg] " alt='pen' />
                 </div>
                 {/* frame 811895 */}
-                <div className="inline-flex top-[283px] left-[75px] gap-[24px] absolute ">
+                <div className="inline-flex top-[283px] left-[75px] gap-[24px] absolute">
                   <p className="w-[200px] h-[138px] font-nohemi font-bold text-[130px] leading-[120%] tracking-normal text-center text-[#F9EBEC]">23</p>
                   {/* frame 811894 */}
                   <div className="inline-flex flex-col w-[218px] gap-[12px]  justify-center">
@@ -56,15 +56,15 @@ export default function Home() {
               </div>
 
               {/* upcoming */}
-              <div className="w-[280px] h-[461px] rounded-4xl  relative">
+              <div className="w-[280px] h-[461px] rounded-4xl  relative ">
                 <p className="w-[34px] h-[77px] top-[259px] left-[228px] absolute font-nohemi font-bold text-[64px] leading-[120%] tracking-normal text-center text-[#C33241]">+</p>
                 {/* frame 811895 */}
-                <div className="inline-flex flex-col top-[0px] left-[35.5px] absolute gap-[24px]  ">
+                <div className="inline-flex flex-col top-[35px] left-[30px] absolute gap-[24px] ">
                   {/* frame 811894 */}
-                  <div className="inline-flex flex-col h-[218px] gap-[12px]  ">
-                    <div className="rotate-90">
-                      <p className="w-[218px] h-[80px] rotate-90 font-outfit font-bold text-[32px] leading-[100%] tracking-normal text-[#C33241]">Upcoming Courses</p>
-                      <p className="w-[218px] h-[46px] rotate-90 font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#C33241]">exciting new courses waiting to boost your skills.</p>
+                  <div className="inline-flex flex-col h-[218px] gap-[12px]  rotate-90 justify-center items-center">
+                    <div className="rotate-180 ">
+                      <p className="w-[218px] h-[80px] font-outfit font-bold text-[32px] leading-[100%] tracking-normal text-[#C33241]">Upcoming Courses</p>
+                      <p className="w-[218px] h-[46px] font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#C33241]">exciting new courses waiting to boost your skills.</p>
                     </div>
                   </div>
                   {/* text */}
@@ -72,15 +72,15 @@ export default function Home() {
                 </div>
               </div>
               {/* ongoing */}
-              <div className="w-[280px] h-[461px] rounded-4xl  relative">
+              <div className="w-[280px] h-[461px] rounded-4xl  relative ">
                 <p className="w-[34px] h-[77px] top-[259px] left-[228px] absolute font-nohemi font-bold text-[64px] leading-[120%] tracking-normal text-center text-[#C33241]">+</p>
                 {/* frame 811895 */}
-                <div className="inline-flex flex-col top-[0px] left-[35.5px] absolute gap-[24px]  ">
+                <div className="inline-flex flex-col top-[35px] left-[30px] absolute gap-[24px] ">
                   {/* frame 811894 */}
-                  <div className="inline-flex flex-col h-[218px] gap-[12px]  ">
-                    <div className="rotate-90">
-                      <p className="w-[218px] h-[80px] rotate-90 font-outfit font-bold text-[32px] leading-[100%] tracking-normal text-[#C33241]">Ongoing Courses</p>
-                      <p className="w-[218px] h-[46px] rotate-90 font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#C33241]">currently happening—don’t miss out on the action!</p>
+                  <div className="inline-flex flex-col h-[218px] gap-[12px]  rotate-90 justify-center items-center">
+                    <div className="rotate-180 ">
+                      <p className="w-[218px] h-[80px] font-outfit font-bold text-[32px] leading-[100%] tracking-normal text-[#C33241]">Ongoing Courses</p>
+                      <p className="w-[218px] h-[46px] font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#C33241]">currently happening—don’t miss out on the action!</p>
                     </div>
                   </div>
                   {/* text */}
@@ -89,7 +89,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div >

@@ -14,7 +14,7 @@ const ActiveFrame = ({title, description, number}) => {
             </div>
             <p className="w-[34px] h-[77px] top-[275px] left-[262px] absolute font-nohemi font-bold text-[64px] leading-[120%] tracking-normal text-center text-[#FFFFFF]">+</p>
             {/* frame 811897 */}
-            <div className="inline-flex top-[126px] left-[90px] absolute gap-[42px]">
+            <div className="inline-flex top-[126px] left-[90px] absolute gap-[42px] swipe-out">
                 {/* react frame */}
                 <div className="w-[75px] h-[75px] rotate-[16.67deg] ">
                     {/* react icon */}
@@ -37,7 +37,7 @@ const ActiveFrame = ({title, description, number}) => {
                 <p className="w-[200px] h-[138px] font-nohemi font-bold text-[130px] leading-[120%] tracking-normal text-center text-[#F9EBEC]">{number}</p>
                 {/* frame 811894 */}
                 <div className="inline-flex flex-col w-[218px] gap-[12px]  justify-center">
-                    <p className="w-[164px] h-[40px] font-outfit font-bold text-[30px] leading-[100%] tracking-normal text-center text-[#F9EBEC]">{title}</p>
+                    <p className="w-[270px] h-[40px] font-outfit font-bold text-[30px] leading-[100%] tracking-normal text-center text-[#F9EBEC]">{title}</p>
                     <p className="w-[218px] h-[46px] font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#F9EBEC]">{description}</p>
                 </div>
             </div>

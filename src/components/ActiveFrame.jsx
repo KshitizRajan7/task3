@@ -14,7 +14,7 @@ const ActiveFrame = ({title, description, number}) => {
             </div>
             <p className="w-[34px] h-[77px] top-[275px] left-[262px] absolute font-nohemi font-bold text-[64px] leading-[120%] tracking-normal text-center text-[#FFFFFF]">+</p>
             {/* frame 811897 */}
-            <div className="inline-flex top-[126px] left-[90px] absolute gap-[42px] swipe-out">
+            <div className="inline-flex top-[126px] left-[90px] absolute gap-[42px] swipe-in">
                 {/* react frame */}
                 <div className="w-[75px] h-[75px] rotate-[16.67deg] ">
                     {/* react icon */}

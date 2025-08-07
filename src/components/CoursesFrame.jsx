@@ -1,8 +1,8 @@
 import React from 'react'
 
-const CoursesFrame = ({ title, description, number, key }) => {
+const CoursesFrame = ({ title, description, number }) => {
     return (
-        <div className="w-[280px] h-[461px] rounded-4xl  relative ">
+        <div className={`w-[280px] h-[461px] rounded-4xl  relative`} >
             <p className="w-[34px] h-[77px] top-[259px] left-[228px] absolute font-nohemi font-bold text-[64px] leading-[120%] tracking-normal text-center text-[#C33241]">+</p>
             {/* frame 811895 */}
             <div className="inline-flex flex-col top-[35px] left-[30px] absolute gap-[24px] ">

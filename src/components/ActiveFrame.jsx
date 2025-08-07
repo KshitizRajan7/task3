@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AllCourses = () => {
+const ActiveFrame = ({title, description, number}) => {
     return (
         <div className="w-[592px] h-[461px] rounded-4xl bg-[#C33241] relative">
             {/* button */}
@@ -34,15 +34,15 @@ const AllCourses = () => {
             </div>
             {/* frame 811895 */}
             <div className="inline-flex top-[283px] left-[75px] gap-[24px] absolute">
-                <p className="w-[200px] h-[138px] font-nohemi font-bold text-[130px] leading-[120%] tracking-normal text-center text-[#F9EBEC]">23</p>
+                <p className="w-[200px] h-[138px] font-nohemi font-bold text-[130px] leading-[120%] tracking-normal text-center text-[#F9EBEC]">{number}</p>
                 {/* frame 811894 */}
                 <div className="inline-flex flex-col w-[218px] gap-[12px]  justify-center">
-                    <p className="w-[164px] h-[40px] font-outfit font-bold text-[30px] leading-[100%] tracking-normal text-center text-[#F9EBEC]">All Courses</p>
-                    <p className="w-[218px] h-[46px] font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#F9EBEC]">courses you're powering through right now.</p>
+                    <p className="w-[164px] h-[40px] font-outfit font-bold text-[30px] leading-[100%] tracking-normal text-center text-[#F9EBEC]">{title}</p>
+                    <p className="w-[218px] h-[46px] font-outfit font-normal text-[18px] leading-[100%] tracking-normal text-[#F9EBEC]">{description}</p>
                 </div>
             </div>
         </div>
     )
 }
 
-export default AllCourses
+export default ActiveFrame

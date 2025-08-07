@@ -1,8 +1,18 @@
-import AllCourses from "@/components/AllCourses";
+"use client"
+import ActiveFrame from "@/components/ActiveFrame";
+import ClickMe from "@/components/ClickMe";
 import CoursesFrame from "@/components/CoursesFrame";
-import { courses } from "@/data/data";
+import { courses } from "@/data/data.js";
+import { useState } from "react";
+
 
 export default function Home() {
+  const [isAllcoursesActive, setIsAllCoursesActive] = useState(true);
+  const [isUpcomingActive, setIsUpcomingActive] = useState(false);
+  const [isOngoingActive, setIsOngoingActive] = useState(false);
+  const [isShowClickmeAllcourses, setIsShowClickmeAllcourses] = useState(false);
+  const [isShowClickmeUpcoming, setIsShowClickmeUpcoming] = useState(false);
+  const [isShowClickmeOutgoing, setIsShowClickmeOutgoing] = useState(false);
   return (
     <div className="h-screen w-screen inline-flex justify-center items-center">
       <div className="w-[1440px] h-[854px] bg-white relative">
@@ -16,20 +26,58 @@ export default function Home() {
               <p className="w-[550px] h-[38px] font-nohemi font-bold text-[32px] leading-[120%] tracking-normal">Dive Into <span className="font-nohemi font-bold text-[32px] leading-[120%] tracking-normal text-[#1DA077]">What’s Hot Right Now! 🔥</span></p>
             </div>
             {/* stats */}
-            <div className="inline-flex w-[1216px] h-[461px] gap-[32px]  ">
+            <div className="inline-flex w-[1216px] h-[461px] gap-[32px]">
               {/* active */}
-              <AllCourses/>
+              {isAllcoursesActive ?
+                courses.filter(course => course.type === "Allcourses").map((course, index) => (
+                  <div key={index}>
+                    <ActiveFrame key={course.type} {...course} />
+                  </div>
+                ))
+                :
+                courses.filter(course => course.type === "Allcourses").map((course, index) => (
+                  <div key={index} onClick={() => { setIsAllCoursesActive(true); setIsOngoingActive(false); setIsUpcomingActive(false) }} onMouseOver={() => setIsShowClickmeAllcourses(true)} onMouseLeave={() => setIsShowClickmeAllcourses(false)}>
+                    {isShowClickmeAllcourses && <ClickMe/>}
+                    <CoursesFrame key={course.type} {...course} />
+                  </div>
+                ))
+              }
+
+              {/* inactive */}
 
               {/* upcoming */}
-              {
-                courses.filter(course => course.type === "Upcoming").map(course => (
-                  <CoursesFrame key={course.type} {...course} />
+              {isUpcomingActive ?
+                courses.filter(course => course.type === "Upcoming").map((course, index) => (
+                  <div key={index}>
+                    <ActiveFrame key={course.type} {...course} />
+                  </div>
+
+                ))
+                :
+                courses.filter(course => course.type === "Upcoming").map((course, index) => (
+                  <div key={index} onClick={() => { setIsAllCoursesActive(false); setIsOngoingActive(false); setIsUpcomingActive(true) }} onMouseOver={() => setIsShowClickmeUpcoming(true)} onMouseLeave={() => setIsShowClickmeUpcoming(false)}>
+                    {isShowClickmeUpcoming && 
+                    <ClickMe/>
+                    }
+                    <CoursesFrame key={course.type} {...course} />
+                  </div>
                 ))
               }
               {/* ongoing */}
-              {
-                courses.filter(course => course.type === "Ongoing").map(course => (
-                  <CoursesFrame key={course.type} {...course} />
+              {isOngoingActive ?
+                courses.filter(course => course.type === "Ongoing").map((course, index) => (
+                  <div key={index}>
+                    <ActiveFrame key={course.type} {...course} />
+                  </div>
+                ))
+                :
+                courses.filter(course => course.type === "Ongoing").map((course, index) => (
+                  <div key={index} onClick={() => { setIsAllCoursesActive(false); setIsOngoingActive(true); setIsUpcomingActive(false) }} onMouseOver={() => setIsShowClickmeOutgoing(true)} onMouseLeave={() => setIsShowClickmeOutgoing(false)}>
+                    {isShowClickmeOutgoing && (
+                      <ClickMe/>
+                    )}
+                    <CoursesFrame key={course.type} {...course} />
+                  </div>
                 ))
               }
             </div>

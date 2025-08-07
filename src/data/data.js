@@ -1,5 +1,11 @@
 export const courses = [
     {
+        type: "Allcourses",
+        title: "All Courses",
+        description: "courses you're powering through right now.",
+        number: "23"
+    },
+    {
         type: "Upcoming",
         title: "Upcoming Courses",
         description: "Exciting new courses waiting to boost your skills",
